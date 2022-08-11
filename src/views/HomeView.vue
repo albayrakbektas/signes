@@ -41,6 +41,21 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@media (max-width: 500px) {
+  .big-images {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .from-left {
+    animation-name: top;
+  }
+  .from-right {
+    animation-name: bottom;
+  }
+}
+.home {
+  position: relative;
+}
 .big-images {
   //position: absolute;
   display: grid;
@@ -61,7 +76,7 @@ export default {
   animation-name: right;
 }
 .fw-pic {
-  height: calc(100% - 70px);
+  height: calc(100%);
   width: 100%;
   object-fit: cover;
   position: absolute;
@@ -82,6 +97,22 @@ export default {
   }
   100% {
     right: 0;
+  }
+}
+@keyframes top {
+  0% {
+    top: -75%;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes bottom {
+  0% {
+    bottom: -75%;
+  }
+  100% {
+    bottom: 0;
   }
 }
 </style>
