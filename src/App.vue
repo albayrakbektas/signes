@@ -18,6 +18,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 button {
   cursor: pointer;
