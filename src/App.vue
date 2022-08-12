@@ -1,7 +1,10 @@
 <template>
   <div id="app">
-    <HeaderMain />
+    <div class="header-sticky">
+      <HeaderMain />
+    </div>
     <router-view />
+    <FooterMain />
   </div>
 </template>
 
@@ -19,7 +22,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   max-width: 100vw;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 button {
   cursor: pointer;
@@ -27,7 +30,8 @@ button {
 </style>
 <script>
 import HeaderMain from "@/components/HeaderMain";
+import FooterMain from "@/components/FooterMain";
 export default {
-  components: { HeaderMain },
+  components: { FooterMain, HeaderMain },
 };
 </script>
