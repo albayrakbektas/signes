@@ -32,7 +32,6 @@ h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, 50%);
-  //color: rgba(215, 192, 136, 1);
   color: #ffffff;
 }
 </style>
