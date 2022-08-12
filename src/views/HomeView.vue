@@ -46,34 +46,34 @@ export default {
       },
       productImages: [
         {
-          src: require("../assets/big-img/from-right.jpeg"),
+          src: require("../assets/small-img/nav-bg.jpeg"),
           alt: "Bambu Picture",
           title: "Lorem Ipsum",
-          subTitle: "Lorem Ipsum",
+          subTitle: "View All Products",
         },
         {
           src: require("../assets/big-img/from-right.jpeg"),
           alt: "Bambu Picture",
           title: "Lorem Ipsum",
-          subTitle: "Lorem Ipsum",
+          subTitle: "View All Products",
         },
         {
           src: require("../assets/big-img/from-right.jpeg"),
           alt: "Bambu Picture",
           title: "Lorem Ipsum",
-          subTitle: "Lorem Ipsum",
+          subTitle: "View All Products",
         },
         {
           src: require("../assets/big-img/from-right.jpeg"),
           alt: "Bambu Picture",
           title: "Lorem Ipsum",
-          subTitle: "Lorem Ipsum",
+          subTitle: "View All Products",
         },
         {
-          src: require("../assets/big-img/from-right.jpeg"),
+          src: require("../assets/full-width-img/full-width-home.jpeg"),
           alt: "Bambu Picture",
           title: "Lorem Ipsum",
-          // subTitle: "Lorem Ipsum",
+          subTitle: "View All Products",
         },
       ],
     };
