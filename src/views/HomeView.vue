@@ -13,6 +13,14 @@
         <HomeBigImage :image="rightImage" />
       </div>
     </div>
+    <div class="product-images">
+      <ProductPicture
+        v-for="(item, index) of productImages"
+        :img="item"
+        :key="index"
+        :class="index.toString()"
+      />
+    </div>
   </div>
 </template>
 
@@ -20,9 +28,10 @@
 // @ is an alias to /src
 
 import HomeBigImage from "@/components/HomeBigImage";
+import ProductPicture from "@/components/ProductPicture";
 export default {
   name: "HomeView",
-  components: { HomeBigImage },
+  components: { ProductPicture, HomeBigImage },
   data() {
     return {
       leftImage: {
@@ -35,6 +44,38 @@ export default {
         alt: "Bambu Picture",
         text: "Lorem Ipsum",
       },
+      productImages: [
+        {
+          src: require("../assets/big-img/from-right.jpeg"),
+          alt: "Bambu Picture",
+          title: "Lorem Ipsum",
+          subTitle: "Lorem Ipsum",
+        },
+        {
+          src: require("../assets/big-img/from-right.jpeg"),
+          alt: "Bambu Picture",
+          title: "Lorem Ipsum",
+          subTitle: "Lorem Ipsum",
+        },
+        {
+          src: require("../assets/big-img/from-right.jpeg"),
+          alt: "Bambu Picture",
+          title: "Lorem Ipsum",
+          subTitle: "Lorem Ipsum",
+        },
+        {
+          src: require("../assets/big-img/from-right.jpeg"),
+          alt: "Bambu Picture",
+          title: "Lorem Ipsum",
+          subTitle: "Lorem Ipsum",
+        },
+        {
+          src: require("../assets/big-img/from-right.jpeg"),
+          alt: "Bambu Picture",
+          title: "Lorem Ipsum",
+          // subTitle: "Lorem Ipsum",
+        },
+      ],
     };
   },
 };
@@ -76,7 +117,7 @@ export default {
   animation-name: right;
 }
 .fw-pic {
-  height: calc(100%);
+  height: calc(100vh - 70px);
   width: 100%;
   object-fit: cover;
   position: absolute;
@@ -113,6 +154,18 @@ export default {
   }
   100% {
     bottom: 0;
+  }
+}
+.product-images {
+  display: grid;
+}
+@media (min-width: 500px) {
+  .product-images {
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .container.\34 {
+    grid-area: 2 / 2 / span 1 / span 2;
   }
 }
 </style>
