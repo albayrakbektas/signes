@@ -13,6 +13,7 @@
         <HomeBigImage :image="rightImage" />
       </div>
     </div>
+    <HomeShortcuts />
     <div class="product-images">
       <ProductPicture
         v-for="(item, index) of productImages"
@@ -29,9 +30,10 @@
 
 import HomeBigImage from "@/components/HomeBigImage";
 import ProductPicture from "@/components/ProductPicture";
+import HomeShortcuts from "@/components/HomeShortcuts";
 export default {
   name: "HomeView",
-  components: { ProductPicture, HomeBigImage },
+  components: { HomeShortcuts, ProductPicture, HomeBigImage },
   data() {
     return {
       leftImage: {
