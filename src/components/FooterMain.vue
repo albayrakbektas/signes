@@ -80,6 +80,10 @@ export default {
   }
 }
 .container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
   grid-template-columns: auto auto;
   justify-content: space-between;
   height: 50px;
