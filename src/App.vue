@@ -32,6 +32,15 @@ a {
 button {
   cursor: pointer;
 }
+.header-sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  background-color: white;
+  z-index: 100;
+}
 </style>
 <script>
 import HeaderMain from "@/components/HeaderMain";
