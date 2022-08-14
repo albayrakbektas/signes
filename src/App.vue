@@ -23,6 +23,11 @@ body {
   text-align: center;
   max-width: 100vw;
   overflow: hidden;
+  min-height: 100vh;
+}
+a {
+  text-decoration: none;
+  color: inherit;
 }
 button {
   cursor: pointer;
