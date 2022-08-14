@@ -64,6 +64,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media (max-width: 500px) {
+  .container {
+    height: unset !important;
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto 1fr;
+    overflow: unset !important;
+    padding-bottom: 120px !important;
+  }
+  .left {
+    grid-template-rows: auto 1fr !important;
+  }
+  .icon,
+  img {
+    height: 15vw !important;
+  }
+  p {
+    padding-right: 0 !important;
+  }
+}
 .container,
 .left,
 .icon-container,
@@ -96,6 +115,9 @@ export default {
 }
 h1 {
   margin-block-start: 0;
+}
+p {
+  padding-right: 10vw;
 }
 .form-container {
   //width: 80%;

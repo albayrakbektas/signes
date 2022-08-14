@@ -25,6 +25,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media (max-width: 500px) {
+  .form-top {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0 !important;
+  }
+}
 form {
   text-align: left !important;
 }
