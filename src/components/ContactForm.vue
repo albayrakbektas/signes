@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form>
+    <form action="mailto:albayrakbektas44@gmail.com" method="POST">
       <div class="form-top">
         <label>
           <input placeholder="Name" />
@@ -13,7 +13,7 @@
         <input placeholder="Subject(Optional)" />
       </label>
       <textarea placeholder="Message" cols="40" rows="6"></textarea>
-      <button>Contact me</button>
+      <button type="submit">Contact me</button>
     </form>
   </div>
 </template>
@@ -47,7 +47,7 @@ textarea {
   background-color: rgba(210, 176, 76, 0.5);
   -webkit-box-shadow: 0 0 0.8333rem rgb(0 0 0 / 50%);
   border: none;
-  color: #fff;
+  color: #000000;
   outline: 0;
   font-family: Poppins, sans-serif;
   font-weight: 400;

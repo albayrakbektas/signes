@@ -95,7 +95,7 @@ export default {
 .container {
   padding: 0 2rem;
   grid-template-columns: 1fr 1fr;
-  height: calc(100vh - 120px);
+  height: calc(100vh - 50px);
   align-content: space-around;
   gap: 5rem;
   overflow: hidden;

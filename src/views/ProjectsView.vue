@@ -11,5 +11,6 @@ export default {
 <style lang="scss" scoped>
 .projects {
   margin-top: 70px;
+  height: calc(100vh - 120px);
 }
 </style>
