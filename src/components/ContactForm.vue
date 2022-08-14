@@ -32,7 +32,7 @@
         name="message"
         required
       ></textarea>
-      <button type="submit">Contact me</button>
+      <button type="submit">{{ $t("_FORM_BUTTON") }}</button>
     </form>
   </div>
 </template>
