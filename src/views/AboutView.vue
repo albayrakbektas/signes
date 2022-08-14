@@ -34,19 +34,25 @@
       </div>
     </div>
     <div v-else class="about-mobile">
-      <img
-        class="bg-img"
-        src="../assets/big-img/from-left.jpeg"
-        alt="bg-image"
-      />
-      <h1>{{ $t("_ABOUT") }}</h1>
+      <div class="about-mobile-top">
+        <img
+          class="bg-img"
+          src="../assets/big-img/from-left.jpeg"
+          alt="bg-image"
+        />
+        <h1>{{ $t("_ABOUT") }}</h1>
+        <hr />
+        <span>
+          <em> {{ $t("_ABOUT_US_NAME") }} </em>
+        </span>
+      </div>
       <div class="content">
         <p>
           {{ $t("_ABOUT_US") }} <br />
           {{ $t("_ABOUT_US_SECOND") }} <br />
-          <span>
-            <em> {{ $t("_ABOUT_US_NAME") }} </em>
-          </span>
+          <!--          <span>-->
+          <!--            <em> {{ $t("_ABOUT_US_NAME") }} </em>-->
+          <!--          </span>-->
         </p>
       </div>
     </div>
@@ -82,7 +88,8 @@ export default {
 <style scoped lang="scss">
 @media (max-width: 500px) {
   .content {
-    height: calc(100vh - 150px) !important;
+    height: unset !important;
+    z-index: 8;
   }
   h1 {
     padding-top: 2rem !important;
@@ -106,14 +113,25 @@ export default {
   margin-top: 70px;
 }
 .about-mobile {
-  height: calc(100vh - 70px);
   margin-top: 70px;
+  display: grid;
+}
+.about-mobile-top {
+  position: relative;
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  align-content: center;
+  justify-content: center;
+  height: 40vh;
+}
+hr {
+  width: 20vw;
 }
 .bg-img {
   position: absolute;
   left: 0;
   top: 0;
-  min-height: 100vh;
+  min-height: 100%;
   opacity: 0.5;
   width: 100vw;
 }
