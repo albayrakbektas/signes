@@ -1,11 +1,116 @@
 <template>
-  <div><h1>This is an contact page</h1></div>
+  <div class="container">
+    <div class="left">
+      <div class="contact-message">
+        <h1>Lorem Ipsum</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. A atque
+          doloribus eveniet impedit ipsam iure laudantium quibusdam! Ea,
+          incidunt laboriosam laudantium maiores nostrum quam quo quos
+          recusandae sint soluta vel?
+        </p>
+      </div>
+      <div class="icon-container">
+        <div
+          v-for="(item, index) of icons"
+          :key="index"
+          class="icon"
+          :class="index.toString()"
+        >
+          <a target="_blank" :href="item.href">
+            <img :src="item.src" :alt="item.alt" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="form-container">
+      <ContactForm />
+    </div>
+  </div>
 </template>
 
 <script>
+import ContactForm from "@/components/ContactForm";
 export default {
   name: "ContactView",
+  components: { ContactForm },
+  data() {
+    return {
+      icons: [
+        {
+          href: "https://www.instagram.com/ssbysignes/",
+          src: require("../assets/icons/instragram.png"),
+          alt: "Instagram icon",
+        },
+        {
+          href: "https://wa.me/905446410304",
+          src: require("../assets/icons/whatsapp.png"),
+          alt: "Whatsapp icon",
+        },
+        {
+          href: "mailto:info@signes.com.tr",
+          src: require("../assets/icons/gmail.png"),
+          alt: "Mail icon",
+        },
+        {
+          href: "tel:+905446410304",
+          src: require("../assets/icons/phone.png"),
+          alt: "Phone icon",
+        },
+      ],
+    };
+  },
 };
 </script>
 
-<style scoped></style>
+<style lang="scss" scoped>
+.container,
+.left,
+.icon-container,
+.icon {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  padding: 0 2rem;
+  grid-template-columns: 1fr 1fr;
+  height: calc(100vh - 120px);
+  align-content: space-around;
+  gap: 5rem;
+  overflow: hidden;
+}
+.contact-message,
+.icon-container,
+.form-container {
+  align-self: flex-start;
+}
+.left {
+  grid-template-rows: 2fr 1fr;
+  height: 100%;
+}
+.contact-message {
+  * {
+    text-align: left;
+  }
+}
+h1 {
+  margin-block-start: 0;
+}
+.form-container {
+  //width: 80%;
+  padding-right: 2rem;
+}
+.icon-container {
+  grid-template-columns: repeat(4, 1fr);
+}
+.icon {
+  height: 140px;
+}
+img {
+  height: 100px;
+  &:hover {
+    height: 120px;
+  }
+}
+</style>
