@@ -31,7 +31,7 @@ export default {
   data() {
     return {
       navList: [
-        { href: "/", text: "HOME" },
+        { href: "/", text: "_HOME" },
         { href: "/projects", text: "_PROJECTS" },
         { href: "/products", text: "_PRODUCTS" },
         { href: "/documents", text: "_DOCUMENTS" },
@@ -57,11 +57,19 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-  position: relative;
-  left: 0;
+  //position: relative;
+  //left: 0;
   padding-bottom: 70px;
   background-color: #ffffff;
   height: 100vh;
+  //height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
 }
 .bg-img {
   position: absolute;
