@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div @focusout="closeMenu" class="header">
     <router-link to="/">
       <img src="../assets/brand-logo.jpeg" alt="brand logo" />
     </router-link>
@@ -10,7 +10,28 @@
     >
       <span class="material-symbols-outlined"> menu </span>
     </div>
-    <NavigationMenu v-if="this.$store.state.isMenu" />
+    <div class="container">
+      <div class="bg-img"></div>
+      <div class="close-icon">
+        <span @click="closeMenu" class="material-symbols-outlined">
+          close
+        </span>
+      </div>
+      <ul>
+        <li @click="closeMenu" v-for="(item, index) of navList" :key="index">
+          <router-link :to="item.href">{{ $t(item.text) }}</router-link>
+        </li>
+      </ul>
+      <div class="flags-menu">
+        <button
+          v-for="entry in languages"
+          :key="entry.flag"
+          @click="changeLocale(entry.language)"
+        >
+          <flag :iso="entry.flag" v-bind:squared="false" />
+        </button>
+      </div>
+    </div>
     <nav v-if="!isMobile">
       <router-link to="/">{{ $t("_HOME") }}</router-link>
       <router-link to="/projects">{{ $t("_PROJECTS") }}</router-link>
@@ -33,11 +54,9 @@
 
 <script>
 import i18n from "@/i18n";
-import NavigationMenu from "@/components/NavigationMenu";
 
 export default {
   name: "HeaderMain",
-  components: { NavigationMenu },
   data() {
     return {
       isMobile: false,
@@ -46,15 +65,37 @@ export default {
         { flag: "us", language: "en" },
         { flag: "tr", language: "tr" },
       ],
+      navList: [
+        { href: "/", text: "_HOME" },
+        { href: "/projects", text: "_PROJECTS" },
+        { href: "/products", text: "_PRODUCTS" },
+        { href: "/documents", text: "_DOCUMENTS" },
+        { href: "/about", text: "_ABOUT" },
+        { href: "/contact", text: "_CONTACT" },
+      ],
     };
   },
   created() {
     this.isMobileView();
     window.addEventListener("resize", this.isMobileView);
   },
+  mounted() {
+    document.addEventListener("focusout", this.closeMenu);
+  },
+  beforeDestroy() {
+    document.removeEventListener("focusout", this.closeMenu);
+  },
   methods: {
+    ss() {
+      console.log("ss");
+    },
     updateIsMenu() {
       this.$store.state.isMenu = true;
+      document.querySelector(".container").style.width = "250px";
+    },
+    closeMenu() {
+      this.$store.state.isMenu = false;
+      document.querySelector(".container").style.width = "0";
     },
     changeLocale(locale) {
       i18n.locale = locale;
@@ -129,6 +170,75 @@ img {
   width: 24px;
 }
 button {
+  padding: 3px;
+  font-size: 8px;
+  margin: 2px;
+  border: none;
+  background-color: transparent;
+  &:hover {
+    background-color: rgba(128, 128, 128, 0.2);
+  }
+}
+.container {
+  padding-bottom: 70px;
+  background-color: #ffffff;
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  right: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+.bg-img {
+  position: absolute;
+  background-image: url("../assets/small-img/nav-bg.jpeg");
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  object-fit: fill;
+  background-size: cover;
+  z-index: 3;
+}
+.close-icon {
+  display: grid;
+  align-items: center;
+  justify-content: right;
+  margin-right: 1rem;
+  height: 70px;
+  z-index: 4;
+  position: relative;
+}
+ul {
+  padding-inline-start: 0;
+  position: relative;
+  z-index: 4;
+}
+li {
+  list-style: none;
+  padding: 1rem;
+  z-index: 4;
+}
+a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: inherit;
+  z-index: 4;
+}
+.flags-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+}
+.fi {
+  height: 24px;
+  width: 24px;
+  z-index: 4;
+}
+button {
+  z-index: 4;
   padding: 3px;
   font-size: 8px;
   margin: 2px;
