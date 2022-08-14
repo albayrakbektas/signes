@@ -4,5 +4,10 @@
   "_PRODUCTS": "Products",
   "_DOCUMENTS": "Our Documents",
   "_ABOUT": "About Us",
-  "_CONTACT": "Contact"
+  "_CONTACT": "Contact",
+  "_INPUT_NAME": "Name",
+  "_INPUT_EMAIL": "Email",
+  "_INPUT_SUBJECT": "Subject (Optional)",
+  "_INPUT_MESSAGE": "Message",
+  "_FORM_BUTTON": "Send"
 }

@@ -4,5 +4,10 @@
   "_PRODUCTS": "Ürünlerimiz",
   "_DOCUMENTS": "Belgelerimiz",
   "_ABOUT": "Hakkımızda",
-  "_CONTACT": "İletişim"
+  "_CONTACT": "İletişim",
+  "_INPUT_NAME": "İsim",
+  "_INPUT_EMAIL": "E-posta",
+  "_INPUT_SUBJECT": "Konu (Opsiyonel)",
+  "_INPUT_MESSAGE": "Mesaj",
+  "_FORM_BUTTON": "Gönder"
 }
