@@ -98,6 +98,7 @@ export default {
 }
 .home {
   position: relative;
+  margin-top: 70px;
 }
 .big-images {
   //position: absolute;

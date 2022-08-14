@@ -71,6 +71,7 @@ export default {
     grid-template-rows: auto 1fr;
     overflow: unset !important;
     padding-bottom: 120px !important;
+    margin-top: 70px;
   }
   .left {
     grid-template-rows: auto 1fr !important;

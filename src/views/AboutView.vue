@@ -64,6 +64,7 @@ export default {
 .about {
   grid-template-rows: 1fr 2fr;
   max-height: calc(100vh - 70px);
+  margin-top: 70px;
 }
 .horizontal {
   grid-template-columns: repeat(2, 1fr);
