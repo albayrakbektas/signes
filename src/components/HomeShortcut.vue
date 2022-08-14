@@ -2,7 +2,7 @@
   <router-link :to="img.href">
     <div class="shortcut">
       <img :src="img.src" :alt="img.alt" />
-      <h1>{{ img.title }}</h1>
+      <h1>{{ $t(`${img.title}`) }}</h1>
       <p>{{ img.subTitle }}</p>
     </div>
   </router-link>
@@ -39,8 +39,9 @@ export default {
   }
 }
 h1 {
+  flex-wrap: wrap;
   margin-block-end: 0;
-  text-shadow: -2px 2px #808080;
+  font-weight: normal;
 }
 img {
   height: 10vw;

@@ -21,28 +21,28 @@ export default {
         {
           src: require("../assets/shortcuts/project.png"),
           alt: "projects image",
-          title: "Our projects",
+          title: "_PROJECTS",
           subTitle: "Lorem Ipsum",
           href: "/projects",
         },
         {
           src: require("../assets/shortcuts/document.jpg"),
           alt: "document image",
-          title: "Our documents",
+          title: "_DOCUMENTS",
           subTitle: "Lorem Ipsum",
           href: "/documents",
         },
         {
           src: require("../assets/shortcuts/about.png"),
           alt: "about us image",
-          title: "About us",
+          title: "_ABOUT",
           subTitle: "Lorem Ipsum",
           href: "/about",
         },
         {
           src: require("../assets/shortcuts/contact.png"),
           alt: "contact image",
-          title: "Contact us",
+          title: "_CONTACT",
           subTitle: "Lorem Ipsum",
           href: "/contact",
         },
@@ -58,9 +58,7 @@ export default {
     grid-template-columns: repeat(2, 1fr) !important;
     grid-template-rows: repeat(2, 1fr);
   }
-  .\30,
-  .\31,
-  .\32 {
+  .\31 {
     border-right: none !important;
   }
   .\30,
@@ -69,6 +67,7 @@ export default {
   }
   .\32,
   .\33 {
+    padding-top: 2rem;
     align-self: flex-end;
   }
 }
