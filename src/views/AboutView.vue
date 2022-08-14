@@ -1,50 +1,54 @@
 <template>
-  <div class="about">
-    <div class="horizontal">
-      <div class="title-container">
-        <h1>About us</h1>
+  <div>
+    <div v-if="windowWidth > 500" class="about">
+      <div class="horizontal">
+        <div class="title-container">
+          <h1>About us</h1>
+        </div>
+        <img
+          class="img-horizontal"
+          src="../assets/full-width-img/full-width-home.jpeg"
+          alt="img"
+        />
       </div>
-      <img
-        class="img-horizontal"
-        src="../assets/full-width-img/full-width-home.jpeg"
-        alt="img"
-      />
+      <div class="vertical">
+        <img
+          class="img-vertical"
+          src="../assets/big-img/from-right.jpeg"
+          alt="img"
+        />
+        <div class="content">
+          <p>
+            {{ $t("_ABOUT_US") }} <br />
+            {{ $t("_ABOUT_US_SECOND") }} <br />
+            <span>
+              <em> {{ $t("_ABOUT_US_NAME") }} </em>
+            </span>
+          </p>
+        </div>
+        <img
+          class="img-vertical"
+          src="../assets/big-img/from-left.jpeg"
+          alt="img"
+        />
+      </div>
     </div>
-    <div class="vertical">
+    <div v-else class="about-mobile">
       <img
-        class="img-vertical"
-        src="../assets/big-img/from-right.jpeg"
-        alt="img"
+        class="bg-img"
+        src="../assets/big-img/from-left.jpeg"
+        alt="bg-image"
       />
-      <div>
+      <h1>{{ $t("_ABOUT") }}</h1>
+      <div class="content">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus at
-          culpa error exercitationem incidunt minima officia qui rem rerum
-          soluta? Cupiditate dolorem doloremque enim eveniet ex, fugiat in minus
-          quam. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          Accusamus at culpa error exercitationem incidunt minima officia qui
-          rem rerum soluta? Cupiditate dolorem doloremque enim eveniet ex,
-          fugiat in minus quam. Lorem ipsum dolor sit amet, consectetur
-          adipisicing elit. Accusamus at culpa error exercitationem incidunt
-          minima officia qui rem rerum soluta? Cupiditate dolorem doloremque
-          enim eveniet ex, fugiat in minus quam. Lorem ipsum dolor sit amet,
-          consectetur adipisicing elit. Accusamus at culpa error exercitationem
-          incidunt minima officia qui rem rerum soluta? Cupiditate dolorem
-          doloremque enim eveniet ex, fugiat in minus quam. Lorem ipsum dolor
-          sit amet, consectetur adipisicing elit. Accusamus at culpa error
-          exercitationem incidunt minima officia qui rem rerum soluta?
-          Cupiditate dolorem doloremque enim eveniet ex, fugiat in minus quam.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus at
-          culpa error exercitationem incidunt minima officia qui rem rerum
-          soluta? Cupiditate dolorem doloremque enim eveniet ex, fugiat in minus
-          quam.
+          {{ $t("_ABOUT_US") }} <br />
+          {{ $t("_ABOUT_US_SECOND") }} <br />
+          <span>
+            <em> {{ $t("_ABOUT_US_NAME") }} </em>
+          </span>
         </p>
       </div>
-      <img
-        class="img-vertical"
-        src="../assets/big-img/from-left.jpeg"
-        alt="img"
-      />
     </div>
   </div>
 </template>
@@ -53,14 +57,43 @@
 export default {
   name: "AboutView",
   data() {
-    return {};
+    return {
+      windowWidth: window.innerWidth,
+    };
   },
-  created() {},
-  methods: {},
+  mounted() {
+    this.$nextTick(() => {
+      window.addEventListener("resize", this.onResize);
+    });
+  },
+
+  beforeDestroy() {
+    window.removeEventListener("resize", this.onResize);
+  },
+
+  methods: {
+    onResize() {
+      this.windowWidth = window.windowWidth;
+    },
+  },
 };
 </script>
 
 <style scoped lang="scss">
+@media (max-width: 500px) {
+  .content {
+    height: calc(100vh - 150px) !important;
+  }
+  h1 {
+    padding-top: 2rem !important;
+    margin-block-end: 0 !important;
+  }
+  p {
+    padding: 1rem 2rem !important;
+    font-size: 1.2rem !important;
+    line-height: 1.6rem !important;
+  }
+}
 .about,
 .horizontal,
 .vertical {
@@ -71,6 +104,18 @@ export default {
   grid-template-rows: 1fr 2fr;
   max-height: calc(100vh - 70px);
   margin-top: 70px;
+}
+.about-mobile {
+  height: calc(100vh - 70px);
+  margin-top: 70px;
+}
+.bg-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-height: 100vh;
+  opacity: 0.5;
+  width: 100vw;
 }
 .horizontal {
   grid-template-columns: repeat(2, 1fr);
@@ -84,7 +129,7 @@ export default {
   }
 }
 .vertical {
-  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
 }
 .img-horizontal {
   height: calc(calc(100vh - 70px) / 3);
@@ -92,10 +137,27 @@ export default {
 }
 .img-vertical {
   height: calc(calc(100vh - 70px) / 3 * 2);
-  width: 20vw;
+  width: 100%;
+}
+.content {
+  height: calc(calc(100vh - 70px) / 3 * 2);
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
 }
 p {
   padding: 1rem 3rem;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  font-family: "Arial Unicode MS", fantasy;
+  span:last-child {
+    font-family: Times, sans-serif;
+    display: inline-block;
+    padding-top: 2rem;
+    font-weight: bolder;
+    font-style: italic !important;
+  }
 }
 img {
   object-fit: cover;
