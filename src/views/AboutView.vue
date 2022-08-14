@@ -46,6 +46,9 @@
           <em> {{ $t("_ABOUT_US_NAME") }} </em>
         </span>
       </div>
+      <div class="main-title">
+        {{ $t("_ABOUT_US_SECOND") }}
+      </div>
       <div class="content">
         <p>
           {{ $t("_ABOUT_US") }} <br />
@@ -96,9 +99,10 @@ export default {
     margin-block-end: 0 !important;
   }
   p {
-    padding: 1rem 2rem !important;
+    padding: 0 2rem !important;
     font-size: 1.2rem !important;
     line-height: 1.6rem !important;
+    text-align: left;
   }
 }
 .about,
@@ -134,6 +138,12 @@ hr {
   min-height: 100%;
   opacity: 0.5;
   width: 100vw;
+}
+.main-title {
+  padding: 1rem 2rem 0 2rem;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  font-style: italic;
 }
 .horizontal {
   grid-template-columns: repeat(2, 1fr);
