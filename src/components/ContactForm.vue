@@ -1,18 +1,37 @@
 <template>
   <div>
-    <form action="mailto:albayrakbektas44@gmail.com" method="POST">
+    <form
+      action="https://formsubmit.co/1a3b21370ecf398abfa4eb9f7e111a4d"
+      method="POST"
+    >
       <div class="form-top">
         <label>
-          <input placeholder="Name" />
+          <input
+            :placeholder="$t('_INPUT_NAME')"
+            type="text"
+            name="name"
+            required
+          />
         </label>
         <label>
-          <input placeholder="Email" />
+          <input
+            :placeholder="$t('_INPUT_EMAIL')"
+            type="email"
+            name="email"
+            required
+          />
         </label>
       </div>
       <label>
-        <input placeholder="Subject(Optional)" />
+        <input :placeholder="$t('_INPUT_SUBJECT')" type="text" name="subject" />
       </label>
-      <textarea placeholder="Message" cols="40" rows="6"></textarea>
+      <textarea
+        :placeholder="$t('_INPUT_MESSAGE')"
+        cols="40"
+        rows="6"
+        name="message"
+        required
+      ></textarea>
       <button type="submit">Contact me</button>
     </form>
   </div>
