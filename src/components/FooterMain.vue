@@ -12,7 +12,7 @@
         :class="index.toString()"
       >
         <a target="_blank" :href="item.href">
-          <img :src="item.src" :alt="item.alt" />
+          <img :src="item.src" :alt="item.alt" :title="item.title" />
         </a>
       </div>
     </div>
@@ -29,21 +29,25 @@ export default {
           href: "https://www.instagram.com/ssbysignes/",
           src: require("../assets/icons/instragram.png"),
           alt: "Instagram icon",
+          title: "Instagram",
         },
         {
           href: "https://wa.me/905446410304",
           src: require("../assets/icons/whatsapp.png"),
           alt: "Whatsapp icon",
+          title: "Whatsapp",
         },
         {
           href: "mailto:info@signes.com.tr",
           src: require("../assets/icons/gmail.png"),
           alt: "Mail icon",
+          title: "Email",
         },
         {
           href: "tel:+905446410304",
           src: require("../assets/icons/phone.png"),
           alt: "Phone icon",
+          title: "Phone",
         },
       ],
     };

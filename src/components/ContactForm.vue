@@ -73,6 +73,18 @@ textarea {
   line-height: 1.8;
   margin-bottom: 2.5rem;
 }
+::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
 textarea {
   overflow: auto;
   resize: vertical;
@@ -84,7 +96,7 @@ button {
   -webkit-box-shadow: 0 0 0.8333rem rgb(0 0 0 / 50%);
   font-family: Poppins, sans-serif;
   font-size: 1rem;
-  font-weight: 400;
+  //font-weight: 400;
   letter-spacing: 0.025em;
   line-height: 1.5;
   text-transform: none;
@@ -92,6 +104,8 @@ button {
   outline: 0;
   cursor: pointer;
   vertical-align: middle;
+  transition: background-color 500ms;
+  font-weight: bold;
   &:hover {
     background-color: #e02f7b;
   }

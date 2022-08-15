@@ -18,7 +18,7 @@
           :class="index.toString()"
         >
           <a target="_blank" :href="item.href">
-            <img :src="item.src" :alt="item.alt" />
+            <img :src="item.src" :alt="item.alt" :title="item.title" />
           </a>
         </div>
       </div>
@@ -41,21 +41,25 @@ export default {
           href: "https://www.instagram.com/ssbysignes/",
           src: require("../assets/icons/instragram.png"),
           alt: "Instagram icon",
+          title: "Instagram",
         },
         {
           href: "https://wa.me/905446410304",
           src: require("../assets/icons/whatsapp.png"),
           alt: "Whatsapp icon",
+          title: "Whatsapp",
         },
         {
           href: "mailto:info@signes.com.tr",
           src: require("../assets/icons/gmail.png"),
           alt: "Mail icon",
+          title: "Email",
         },
         {
           href: "tel:+905446410304",
           src: require("../assets/icons/phone.png"),
           alt: "Phone icon",
+          title: "Phone",
         },
       ],
     };
@@ -121,17 +125,27 @@ p {
   padding-right: 10vw;
 }
 .form-container {
-  //width: 80%;
   padding-right: 2rem;
 }
 .icon-container {
   grid-template-columns: repeat(4, 1fr);
+  //width: 0;
+  animation: icon-width 1s linear;
+}
+@keyframes icon-width {
+  0% {
+    width: 90%;
+  }
+  100% {
+    width: 100%;
+  }
 }
 .icon {
   height: 140px;
 }
 img {
   height: 100px;
+  transition: height 500ms;
   &:hover {
     height: 120px;
   }

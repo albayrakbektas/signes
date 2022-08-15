@@ -148,6 +148,7 @@ nav {
     text-decoration: none;
     color: #000000;
     font-weight: inherit;
+    transition: font-weight 500ms;
     &:hover {
       font-weight: 700;
     }
@@ -175,8 +176,10 @@ button {
   margin: 2px;
   border: none;
   background-color: transparent;
+  transition: opacity 500ms;
   &:hover {
-    background-color: rgba(128, 128, 128, 0.2);
+    opacity: 0.5;
+    //background-color: rgba(128, 128, 128, 0.2);
   }
 }
 .container {
@@ -244,8 +247,10 @@ button {
   margin: 2px;
   border: none;
   background-color: transparent;
+  transition: opacity 500ms;
   &:hover {
-    background-color: rgba(128, 128, 128, 0.2);
+    opacity: 0.5;
+    //background-color: rgba(128, 128, 128, 0.2);
   }
 }
 </style>

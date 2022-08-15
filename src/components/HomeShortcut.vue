@@ -1,7 +1,7 @@
 <template>
   <router-link :to="img.href">
     <div class="shortcut">
-      <img :src="img.src" :alt="img.alt" />
+      <img :src="img.src" :alt="img.alt" :title="$t(img.imgTitle)" />
       <h1>{{ $t(`${img.title}`) }}</h1>
       <p>{{ img.subTitle }}</p>
     </div>

@@ -89,6 +89,9 @@ export default {
     grid-template-columns: 1fr !important;
     grid-template-rows: repeat(2, 1fr);
   }
+  .big-image {
+    width: 100% !important;
+  }
   .from-left {
     animation-name: top;
   }
@@ -108,8 +111,7 @@ export default {
   cursor: pointer;
   z-index: 2;
 }
-.from-left,
-.from-right {
+.big-image {
   position: relative;
   display: grid;
   animation-duration: 1s;

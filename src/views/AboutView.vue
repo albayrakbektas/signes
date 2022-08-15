@@ -25,6 +25,7 @@
               <em> {{ $t("_ABOUT_US_NAME") }} </em>
             </span>
           </p>
+          <hr class="name-hr" />
         </div>
         <img
           class="img-vertical"
@@ -89,6 +90,21 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.name-hr {
+  width: 0;
+  visibility: hidden;
+  animation: hr-left 1s;
+}
+@keyframes hr-left {
+  0% {
+    width: 0;
+    visibility: visible;
+  }
+  100% {
+    width: 100%;
+    visibility: visible;
+  }
+}
 @media (max-width: 500px) {
   .content {
     height: unset !important;
@@ -175,10 +191,9 @@ hr {
   }
 }
 p {
-  padding: 1rem 3rem;
-  font-size: 1.4rem;
-  line-height: 1.8rem;
-  font-family: "Arial Unicode MS", fantasy;
+  padding: 1rem 5vw;
+  font-size: 1.2rem;
+  line-height: 2rem;
   span:last-child {
     font-family: Times, sans-serif;
     display: inline-block;

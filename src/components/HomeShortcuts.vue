@@ -24,6 +24,7 @@ export default {
           title: "_PROJECTS",
           subTitle: "Lorem Ipsum",
           href: "/projects",
+          imgTitle: "_PROJECTS",
         },
         {
           src: require("../assets/shortcuts/document.jpg"),
@@ -31,6 +32,7 @@ export default {
           title: "_DOCUMENTS",
           subTitle: "Lorem Ipsum",
           href: "/documents",
+          imgTitle: "_DOCUMENTS",
         },
         {
           src: require("../assets/shortcuts/about.png"),
@@ -38,6 +40,7 @@ export default {
           title: "_ABOUT",
           subTitle: "Lorem Ipsum",
           href: "/about",
+          imgTitle: "_ABOUT",
         },
         {
           src: require("../assets/shortcuts/contact.png"),
@@ -45,6 +48,7 @@ export default {
           title: "_CONTACT",
           subTitle: "Lorem Ipsum",
           href: "/contact",
+          imgTitle: "_CONTACT",
         },
       ],
     };
