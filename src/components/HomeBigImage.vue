@@ -26,6 +26,7 @@ img {
   text-align: center;
   height: 100%;
   width: 100%;
+  object-fit: cover;
 }
 h1 {
   position: absolute;

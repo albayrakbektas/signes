@@ -101,17 +101,24 @@ export default {
   margin-top: 70px;
 }
 .big-images {
-  //position: absolute;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, auto);
+  justify-content: space-around;
   height: calc(100vh - 70px);
+  cursor: pointer;
   z-index: 2;
 }
 .from-left,
 .from-right {
   position: relative;
+  display: grid;
   animation-duration: 1s;
+  width: 50vw;
   z-index: 2;
+  transition: width 1s;
+  &:hover {
+    width: 60vw;
+  }
 }
 .from-left {
   animation-name: left;
