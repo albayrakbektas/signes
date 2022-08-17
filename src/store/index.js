@@ -75,6 +75,62 @@ export default new Vuex.Store({
         subTitle: "subTitle",
       },
     ],
+    projects: [
+      {
+        src: [
+          {
+            src: require("../assets/brand-logo.jpeg"),
+            alt: "alt-1",
+          },
+          {
+            src: require("../assets/brand-logo.jpeg"),
+            alt: "alt-1",
+          },
+        ],
+        title: "Title1",
+        subTitle:
+          "Some text that describes me lorem ipsum ipsum lorem.Some text that\n" +
+          "              describes me lorem ipsum ipsum lorem.Some text that describes me\n" +
+          "              lorem ipsum ipsum lorem.Some text that describes me lorem ipsum\n" +
+          "              ipsum lorem.",
+      },
+      {
+        src: [
+          {
+            src: require("../assets/brand-logo.jpeg"),
+            alt: "alt-1",
+          },
+          {
+            src: require("../assets/brand-logo.jpeg"),
+            alt: "alt-1",
+          },
+        ],
+        title: "Title1",
+        subTitle:
+          "Some text that describes me lorem ipsum ipsum lorem.Some text that\n" +
+          "              describes me lorem ipsum ipsum lorem.Some text that describes me\n" +
+          "              lorem ipsum ipsum lorem.Some text that describes me lorem ipsum\n" +
+          "              ipsum lorem.",
+      },
+      {
+        src: [
+          {
+            src: require("../assets/brand-logo.jpeg"),
+            alt: "alt-1",
+          },
+          {
+            src: require("../assets/brand-logo.jpeg"),
+            alt: "alt-1",
+          },
+        ],
+        title: "Title1",
+        subTitle:
+          "Some text that describes me lorem ipsum ipsum lorem.Some text that\n" +
+          "              describes me lorem ipsum ipsum lorem.Some text that describes me\n" +
+          "              lorem ipsum ipsum lorem.Some text that describes me lorem ipsum\n" +
+          "              ipsum lorem.",
+      },
+    ],
   },
   getters: {},
   mutations: {},
