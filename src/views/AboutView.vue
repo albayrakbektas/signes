@@ -93,7 +93,7 @@ export default {
 .name-hr {
   width: 0;
   visibility: hidden;
-  animation: hr-left 1s;
+  animation: hr-left 2s;
 }
 @keyframes hr-left {
   0% {
