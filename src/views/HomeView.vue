@@ -34,6 +34,9 @@ import HomeShortcuts from "@/components/HomeShortcuts";
 export default {
   name: "HomeView",
   components: { HomeShortcuts, ProductPicture, HomeBigImage },
+  created() {
+    window.scrollTo(0, 0);
+  },
   data() {
     return {
       leftImage: {
