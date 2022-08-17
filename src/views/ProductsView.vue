@@ -23,6 +23,9 @@ export default {
   data() {
     return {};
   },
+  created() {
+    window.scrollTo(0, 0);
+  },
   methods: {
     seeDetail() {},
   },

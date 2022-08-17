@@ -37,7 +37,7 @@ export default {
   },
   created() {
     this.getProduct();
-    // this.productSlider();
+    window.scrollTo(0, 0);
   },
   mounted() {
     this.productSlider();
@@ -100,6 +100,10 @@ export default {
   }
   img {
     width: 100vw !important;
+    height: 40vh !important;
+  }
+  .dots {
+    bottom: 10px !important;
   }
 }
 .detail-page {

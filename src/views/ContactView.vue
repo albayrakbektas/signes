@@ -34,6 +34,9 @@ import ContactForm from "@/components/ContactForm";
 export default {
   name: "ContactView",
   components: { ContactForm },
+  created() {
+    window.scrollTo(0, 0);
+  },
   data() {
     return {
       icons: [
