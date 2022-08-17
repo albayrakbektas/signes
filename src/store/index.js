@@ -6,48 +6,77 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     isMenu: false,
-    keywords: {
-      tr: {
-        _HOME: "Anasayfa",
-        _PROJECTS: "Projeler",
-        _PARTNERS: "Partnerler",
-        _ABOUT: "Hakkımızda",
-        _CONTACT: "İletişim",
+    products: [
+      {
+        src: [
+          require("../assets/big-img/from-left.jpeg"),
+          require("../assets/big-img/from-right.jpeg"),
+        ],
+        alt: "alt",
+        title: "title",
+        subTitle:
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab asperiores dolores et, eum fugiat fugit hic\n" +
+          "      incidunt, itaque magnam maxime molestias necessitatibus optio reiciendis repellendus similique, sit temporibus\n" +
+          "      voluptates! Consectetur!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab asperiores dolores et, eum fugiat fugit hic\n" +
+          "      incidunt, itaque magnam maxime molestias necessitatibus optio reiciendis repellendus similique, sit temporibus\n" +
+          "      voluptates! Consectetur!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab asperiores dolores et, eum fugiat fugit hic\n" +
+          "      incidunt, itaque magnam maxime molestias necessitatibus optio reiciendis repellendus similique, sit temporibus\n" +
+          "      voluptates! Consectetur!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab asperiores dolores et, eum fugiat fugit hic\n" +
+          "      incidunt, itaque magnam maxime molestias necessitatibus optio reiciendis repellendus similique, sit temporibus\n" +
+          "      voluptates! Consectetur!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab asperiores dolores et, eum fugiat fugit hic\n" +
+          "      incidunt, itaque magnam maxime molestias necessitatibus optio reiciendis repellendus similique, sit temporibus\n" +
+          "      voluptates! Consectetur!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab asperiores dolores et, eum fugiat fugit hic\n" +
+          "      incidunt, itaque magnam maxime molestias necessitatibus optio reiciendis repellendus similique, sit temporibus\n" +
+          "      voluptates! Consectetur!",
       },
-      en: {
-        _HOME: "Home",
-        _PROJECTS: "Projects",
-        _PARTNERS: "Partners",
-        _ABOUT: "About",
-        _CONTACT: "Contact",
+      {
+        src: [
+          require("../assets/big-img/from-right.jpeg"),
+          require("../assets/big-img/from-left.jpeg"),
+        ],
+        alt: "alt",
+        title: "title",
+        subTitle: "subTitle",
       },
-      _HOME: {
-        tr: "Anasayfa",
-        en: "Home",
+      {
+        src: [
+          require("../assets/big-img/from-left.jpeg"),
+          require("../assets/big-img/from-right.jpeg"),
+        ],
+        alt: "alt",
+        title: "title",
+        subTitle: "subTitle",
       },
-      _PROJECTS: {
-        tr: "Projeler",
-        en: "Projects",
+      {
+        src: [
+          require("../assets/big-img/from-right.jpeg"),
+          require("../assets/big-img/from-left.jpeg"),
+        ],
+        alt: "alt",
+        title: "title",
+        subTitle: "subTitle",
       },
-      _PARTNERS: {
-        tr: "Partnerler",
-        en: "Partners",
+      {
+        src: [
+          require("../assets/big-img/from-left.jpeg"),
+          require("../assets/big-img/from-right.jpeg"),
+        ],
+        alt: "alt",
+        title: "title",
+        subTitle: "subTitle",
       },
-      _ABOUT: {
-        tr: "Hakkımızda",
-        en: "About",
+      {
+        src: [
+          require("../assets/big-img/from-right.jpeg"),
+          require("../assets/big-img/from-left.jpeg"),
+        ],
+        alt: "alt",
+        title: "title",
+        subTitle: "subTitle",
       },
-      _CONTACT: {
-        tr: "İletişim",
-        en: "Contact",
-      },
-    },
+    ],
   },
-  getters: {
-    getLocalKey(key) {
-      return this.state.keywords[key][this.$route.query.language];
-    },
-  },
+  getters: {},
   mutations: {},
   actions: {},
   modules: {},
