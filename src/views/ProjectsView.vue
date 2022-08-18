@@ -50,6 +50,14 @@ export default {
     grid-template-columns: 1fr !important;
     margin-top: 2rem;
   }
+  .column {
+    width: 100%;
+    display: block;
+    margin: 2rem 0;
+  }
+  a {
+    width: 100% !important;
+  }
 }
 .projects {
   margin-top: 70px;
@@ -59,6 +67,7 @@ export default {
   display: grid;
   grid-template-columns: repeat(3, auto);
   justify-items: center;
+  margin: 5rem 0;
 }
 .column {
   float: left;
@@ -66,33 +75,21 @@ export default {
   margin-bottom: 16px;
   padding: 0 8px;
 }
-
-@media screen and (max-width: 650px) {
-  .column {
-    width: 100%;
-    display: block;
-  }
-}
-
 img {
-  box-shadow: -10px 10px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: -10px -10px 8px 0 rgba(0, 0, 0, 0.2);
 }
-
 .container {
   padding: 0 16px;
 }
-
 .container::after,
 .row::after {
   content: "";
   clear: both;
   display: table;
 }
-
 .title {
   color: grey;
 }
-
 .button {
   display: grid;
   grid-template-columns: repeat(2, auto);
