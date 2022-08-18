@@ -33,11 +33,6 @@
 <script>
 export default {
   name: "ProjectsView",
-  data() {
-    return {
-      project: {},
-    };
-  },
   created() {
     window.scrollTo(0, 0);
   },
@@ -48,7 +43,6 @@ export default {
 @media (max-width: 500px) {
   .row {
     grid-template-columns: 1fr !important;
-    margin-top: 2rem;
   }
   .column {
     width: 100%;
@@ -67,12 +61,11 @@ export default {
   display: grid;
   grid-template-columns: repeat(3, auto);
   justify-items: center;
-  margin: 5rem 0;
 }
 .column {
   float: left;
   width: 90%;
-  margin-bottom: 16px;
+  margin: 2rem 0;
   padding: 0 8px;
 }
 img {

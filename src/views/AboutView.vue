@@ -6,8 +6,8 @@
           <h1>About us</h1>
         </div>
         <img
-          class="img-horizontal"
-          src="../assets/full-width-img/full-width-home.jpeg"
+          class="img-horizontal original"
+          src="../assets/original-logo.jpeg"
           alt="img"
         />
       </div>
@@ -207,5 +207,8 @@ p {
 }
 img {
   object-fit: cover;
+}
+.original {
+  object-fit: fill;
 }
 </style>

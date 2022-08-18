@@ -79,7 +79,7 @@ export default {
         }
         slides[this.slideIndex - 1].style.display = "block";
         dots[this.slideIndex - 1].className += " active";
-        setTimeout(this.productSlider, 2000);
+        setTimeout(this.productSlider, 3000);
       }
     },
   },

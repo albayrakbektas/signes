@@ -1,7 +1,7 @@
 <template>
   <div @focusout="closeMenu" class="header">
     <router-link to="/">
-      <img src="../assets/brand-logo.jpeg" alt="brand logo" />
+      <img src="../assets/img.png" alt="brand logo" />
     </router-link>
     <div
       v-if="isMobile && !this.$store.state.isMenu"
@@ -158,6 +158,7 @@ img {
   height: 70px;
   width: 210px;
   object-fit: fill;
+  background: transparent;
 }
 .flags {
   display: flex;
